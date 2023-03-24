@@ -1,17 +1,15 @@
 import React from 'react'
 import { Typography, Box, Stack } from '@mui/material'
-import herobg from '../assets/images/herobg.png'
 import { ThemeProvider } from '@mui/material/styles'
 import theme from '../themes/theme.jsx'
 import { StyledButton } from './StyledButton'
-import TextContent from './TextContent'
 
 export const SingleColumnLayout = ({title, heading, subheading, bgImage, buttonBorderRadius}) => {
 
     return (
         <>
             <ThemeProvider theme={theme}>
-                <Box style={{ display: 'flex', justifyContent: 'center', backgroundImage: `url(${bgImage})`, backgroundSize: 'cover'}} paddingY={13}>
+                <Box style={{ display: 'flex', justifyContent: 'center', backgroundImage:`url(${bgImage})`, backgroundSize: 'cover'}} paddingY={13}>
                     <Stack direction='column' width='60%' spacing={4}>
                         <Typography variant='h3' color='secondary' textAlign='center'>
                             {title}

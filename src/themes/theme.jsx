@@ -21,8 +21,7 @@ const theme = createTheme({
             md: 900,
             lg: 1400,
         }
-    }
-
+    },
 });
 
 theme.typography.h1 = {

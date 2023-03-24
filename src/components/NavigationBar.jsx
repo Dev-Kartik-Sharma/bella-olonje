@@ -1,6 +1,7 @@
 import React from 'react'
 import { AppBar, Toolbar, Box, Stack, Button } from '@mui/material'
 import logo from '../assets/images/logo.png'
+import menuimg from '../assets/images/menu.png'
 import { ThemeProvider } from '@mui/material/styles'
 import theme from '../themes/theme.jsx'
 import { NavLink } from 'react-router-dom';
@@ -39,6 +40,15 @@ export const NavigationBar = () => {
                                 </NavLink>
                             </Button>
                         ))}
+                    </Stack>
+                    <Stack paddingRight={1} sx={{
+                        display: {
+                            xs: 'flex',
+                            sm: 'flex',
+                            md: 'none',
+                        },
+                    }}>
+                        <img src={menuimg} alt="" />
                     </Stack>
                 </Toolbar>
             </AppBar>

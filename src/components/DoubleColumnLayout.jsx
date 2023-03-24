@@ -14,7 +14,7 @@ export const DoubleColumnLayout = ({phoneimg, title, heading, subheading, direct
                 display='flex' 
                 justifyContent='center' 
                 alignItems='center' 
-                paddingX={{ md:'5'}}>
+                paddingX={{md:'5'}}>
                     <Stack 
                         width={{ 
                             xs:'100%', sm:'100%', md:'50%'
