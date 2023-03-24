@@ -23,6 +23,7 @@ export const Home = () => {
                 you can order form Bella Onojie" 
                 subheading="Download the bella onoje's food app now on" 
                 bgImage={herobgimage} 
+                responsiveBG='#252B42'
                 buttonBorderRadius='30px'
             />
             <Box sx={{
@@ -72,6 +73,7 @@ export const Home = () => {
                 heading="Download the app now." 
                 subheading="Available on your favorite store. Start your premium experience now" 
                 bgImage={lastbgimage} 
+                responsiveBG='#252B42'
                 buttonBorderRadius='10px'
             />
             <FooterBar />
