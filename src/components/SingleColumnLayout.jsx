@@ -22,7 +22,7 @@ export const SingleColumnLayout = ({title, heading, subheading, bgImage, buttonB
                         <Typography variant='h3' color='secondary' textAlign='center'>
                             {subheading}
                         </Typography>
-                        <Stack direction='row' display='flex' justifyContent='space-around' width='70%' alignSelf='center'>
+                        <Stack direction={{xs: 'column', sm: 'column', md: 'row'}} display='flex' justifyContent='space-around' width='70%' alignSelf='center' spacing={2}>
                             <StyledButton buttonText='Playstore' borderRadius={buttonBorderRadius} />
                             <StyledButton buttonText='App store' borderRadius={buttonBorderRadius} />
                         </Stack>

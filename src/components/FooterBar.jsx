@@ -13,8 +13,16 @@ export const FooterBar = () => {
     return (
         <ThemeProvider theme={theme}>
             <Container>
-                <Box display='flex' justifyContent='space-around' alignItems='center' marginY={3}>
-                    <img src={logo} />
+                <Box display='flex' justifyContent='space-around' alignItems='center' marginY={3} sx={{ flexDirection: { xs: 'column', sm: 'column', md:'row'} }} height={{xs: '100px', sm: '100px'}}>
+                    <Stack sx={{ 
+                        display: {
+                            xs: 'none',
+                            sm: 'none',
+                            md: 'flex',
+                        }
+                    }}>
+                        <img src={logo} />
+                    </Stack>
                     <Stack direction='row' spacing={3}>
                         <StyledIcon src={twitter} />
                         <StyledIcon src={facebook} />

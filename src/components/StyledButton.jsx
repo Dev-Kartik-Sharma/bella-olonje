@@ -12,7 +12,7 @@ export const StyledButton = ({buttonText, borderRadius}) => {
         text-align: center;
         justify-content: center;
         padding: 16px 0px;
-        width: 40%;
+        width: 90%;
         height: 60px;
         background: transparent;
         box-shadow: 0px 5px 20px rgba(183, 50, 39, 0.2);

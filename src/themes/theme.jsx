@@ -14,6 +14,15 @@ const theme = createTheme({
         }
     },
 
+    breakpoints: {
+        values: {
+            xs: 0,
+            sm: 400,
+            md: 900,
+            lg: 1400,
+        }
+    }
+
 });
 
 theme.typography.h1 = {

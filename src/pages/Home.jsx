@@ -25,8 +25,17 @@ export const Home = () => {
                 bgImage={herobgimage} 
                 buttonBorderRadius='30px'
             />
-            <Box style={{display: 'flex', width: '60%', marginInline: 'auto', backgroundImage: `url(${phoneimg})`, backgroundSize: 'auto', backgroundRepeat: 'no-repeat',
-            height: '820px', borderBottom: '1px solid grey'}} marginTop={-30}/>
+            <Box sx={{
+                display: 'flex', 
+                width:'60%', 
+                marginInline: 'auto',
+                height:{ xs:'400px', sm: '500px', md:'820px'}, 
+                borderBottom: '1px solid grey', 
+                marginTop: { xs:0, sm: 0, md: -30 },
+                backgroundImage: `url(${phoneimg})`,
+                backgroundSize: 'contain',
+                backgroundRepeat: 'no-repeat',
+            }} />
             <ThemeProvider theme={theme}>
                 <Typography variant='h2' textAlign='center' marginY={4}>
                     How the app works 

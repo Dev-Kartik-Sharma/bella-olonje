@@ -25,7 +25,13 @@ export const NavigationBar = () => {
                             <img src={logo} alt="LOGO" />
                         </NavLink>
                     </Box>
-                    <Stack direction='row' spacing={10} paddingRight={1}>
+                    <Stack direction='row' spacing={10} paddingRight={1} sx={{
+                        display: {
+                            xs: 'none',
+                            sm: 'none',
+                            md: 'flex',
+                        },
+                    }}>
                         {pages.map((page) => (
                             <Button key={page}>
                                 <NavLink to={`/${page}`} style={navLinkStyle}>
