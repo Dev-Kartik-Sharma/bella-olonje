@@ -9,7 +9,7 @@ export const SingleColumnLayout = ({title, heading, subheading, bgImage, buttonB
     return (
         <>
             <ThemeProvider theme={theme}>
-                <Box style={{ display: 'flex', justifyContent: 'center', backgroundImage:`url(${bgImage})`, backgroundSize: 'cover'}} paddingY={13}>
+                <Box sx={{ display: 'flex', justifyContent: 'center', background: {sm: '#252B42', md:`url(${bgImage})`}, backgroundSize: 'cover'}} paddingY={13}>
                     <Stack direction='column' width='60%' spacing={4}>
                         <Typography variant='h3' color='secondary' textAlign='center'>
                             {title}
