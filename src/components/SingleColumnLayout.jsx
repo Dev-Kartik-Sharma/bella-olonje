@@ -9,8 +9,8 @@ export const SingleColumnLayout = ({title, heading, subheading, bgImage, respons
     return (
         <>
             <ThemeProvider theme={theme}>
-                <Box sx={{ display: 'flex', justifyContent: 'center', background: {xs: `${responsiveBG}`, sm:`${responsiveBG}`, md:`url(${bgImage})`}, backgroundSize: 'cover'}} paddingY={13}>
-                    <Stack direction='column' width='60%' spacing={4}>
+                <Box sx={{ display: 'flex', justifyContent:{sm:'start', md:'center'}, background: {xs: `${responsiveBG}`, sm:`${responsiveBG}`, md:`url(${bgImage})`}, backgroundSize: 'cover'}} paddingY={13}>
+                    <Stack direction='column' width={{sm:'100%',md:'65%'}} spacing={4} paddingX={{xs:'5%',sm:'5%'}}>
                         <Typography variant='h3' sx={ 
                             (isResponsiveLastSection) ? {color: 'secondary.main'} : 
                             {color: {xs:'primary.main', sm:'primary.main', md:'secondary.main'}}
@@ -30,8 +30,8 @@ export const SingleColumnLayout = ({title, heading, subheading, bgImage, respons
                             {subheading}
                         </Typography>
                         <Stack direction={(isResponsiveLastSection) ? {xs: 'row', sm: 'row'} : {xs: 'column', sm: 'column', md: 'row'}} width={{xs:'100%',sm:'80%',md:'60%'}} alignSelf='center' spacing={2}>
-                            <StyledButton buttonText={(isResponsiveLastSection) ? 'Buy now' : 'Playstore'} borderRadius={buttonBorderRadius} isResponsiveLastSection={isResponsiveLastSection} />
-                            <StyledButton buttonText={(isResponsiveLastSection) ? 'Try for free' : 'App store'} borderRadius={buttonBorderRadius} isResponsiveLastSection={isResponsiveLastSection} />
+                            <StyledButton buttonText='Playstore' borderRadius={buttonBorderRadius} isResponsiveLastSection={isResponsiveLastSection} />
+                            <StyledButton buttonText='App store' borderRadius={buttonBorderRadius} isResponsiveLastSection={isResponsiveLastSection} />
                         </Stack>
                     </Stack>
                 </Box>

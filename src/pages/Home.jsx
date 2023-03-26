@@ -27,7 +27,7 @@ export const Home = () => {
             />
             <Box sx={{
                 display: 'flex', 
-                width:'60%', 
+                width:{xs:'100%', sm:'70%', md:'60%'}, 
                 marginInline: 'auto',
                 height:{ xs:'400px', sm: '500px', md:'820px'}, 
                 borderBottom:{ xs: 'none', sm:'none', md:'1px solid grey' }, 
@@ -41,12 +41,12 @@ export const Home = () => {
                 How the app works 
             </Typography>
             
-            <Box display='flex' justifyContent='center' sx={{display: {
+            <Box sx={{display: {
                 xs: 'flex',
                 sm: 'flex',
                 md: 'none',
             }}} marginY={3}>
-                <Divider sx={{borderBottomWidth: 2}} />
+                <Divider sx={{ width:'100%', borderBottomWidth: 2}} />
             </Box>
             <DoubleColumnLayout 
                 phoneimg={iphone1}

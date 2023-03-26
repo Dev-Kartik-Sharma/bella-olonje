@@ -44,7 +44,7 @@ theme.typography.h2 = {
 
 theme.typography.h3 = {
     fontFamily: 'Montserrat',
-    fontWeight: 500,
+    fontWeight: 600,
     fontSize: 18,
     color: '#737373',
 }
