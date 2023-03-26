@@ -47,8 +47,8 @@ export const NavigationBar = () => {
                             sm: 'flex',
                             md: 'none',
                         },
-                    }}>
-                        <img src={menuimg} alt="" />
+                    }} width={40}>
+                        <img src={menuimg} />
                     </Stack>
                 </Toolbar>
             </AppBar>

@@ -11,6 +11,9 @@ const theme = createTheme({
         },
         info: {
             main: '#FA4A0C',
+        },
+        dark: {
+            main: '#252B42',
         }
     },
 
@@ -36,12 +39,14 @@ theme.typography.h2 = {
     fontWeight: 700,
     fontSize: 32,
     letterSpacing: 0.2,
+    color: '#252B42',
 }
 
 theme.typography.h3 = {
     fontFamily: 'Montserrat',
     fontWeight: 500,
     fontSize: 18,
+    color: '#737373',
 }
 
 theme.typography.subtitle1 = {

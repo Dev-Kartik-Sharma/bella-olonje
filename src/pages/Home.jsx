@@ -1,4 +1,4 @@
-import { Typography, Box } from '@mui/material'
+import { Typography, Box, Divider } from '@mui/material'
 import React from 'react'
 import { NavigationBar } from '../components/NavigationBar'
 import SingleColumnLayout from '../components/SingleColumnLayout'
@@ -15,7 +15,7 @@ import FooterBar from '../components/FooterBar'
 
 export const Home = () => {
     return (
-        <>
+        <ThemeProvider theme={theme}>
             <NavigationBar />
             <SingleColumnLayout 
                 title="Food App" 
@@ -23,7 +23,6 @@ export const Home = () => {
                 you can order form Bella Onojie" 
                 subheading="Download the bella onoje's food app now on" 
                 bgImage={herobgimage} 
-                responsiveBG='#252B42'
                 buttonBorderRadius='30px'
             />
             <Box sx={{
@@ -31,17 +30,24 @@ export const Home = () => {
                 width:'60%', 
                 marginInline: 'auto',
                 height:{ xs:'400px', sm: '500px', md:'820px'}, 
-                borderBottom: '1px solid grey', 
+                borderBottom:{ xs: 'none', sm:'none', md:'1px solid grey' }, 
                 marginTop: { xs:0, sm: 0, md: -30 },
                 backgroundImage: `url(${phoneimg})`,
                 backgroundSize: 'contain',
                 backgroundRepeat: 'no-repeat',
             }} />
-            <ThemeProvider theme={theme}>
-                <Typography variant='h2' textAlign='center' marginY={4}>
-                    How the app works 
-                </Typography>
-            </ThemeProvider>
+            
+            <Typography variant='h2' textAlign='center' marginY={4}>
+                How the app works 
+            </Typography>
+            
+            <Box display='flex' justifyContent='center' sx={{display: {
+                xs: 'flex',
+                sm: 'flex',
+                md: 'none',
+            }}} marginY={3}>
+                <Divider sx={{borderBottomWidth: 2}} />
+            </Box>
             <DoubleColumnLayout 
                 phoneimg={iphone1}
                 title="Create an account"
@@ -70,14 +76,15 @@ export const Home = () => {
                 direction="row"
             />
             <SingleColumnLayout 
-                heading="Download the app now." 
-                subheading="Available on your favorite store. Start your premium experience now" 
-                bgImage={lastbgimage} 
+                heading="Download the app now."
+                subheading="Available on your favorite store. Start your premium experience now."
                 responsiveBG='#252B42'
+                bgImage={lastbgimage}
                 buttonBorderRadius='10px'
+                isResponsiveLastSection='true'
             />
             <FooterBar />
-        </>
+        </ ThemeProvider>
     )
 }
 

@@ -4,25 +4,34 @@ import { ThemeProvider } from '@mui/material/styles'
 import theme from '../themes/theme.jsx'
 import { StyledButton } from './StyledButton'
 
-export const SingleColumnLayout = ({title, heading, subheading, bgImage, responsiveBG, buttonBorderRadius}) => {
+export const SingleColumnLayout = ({title, heading, subheading, bgImage, responsiveBG, buttonBorderRadius, isResponsiveLastSection}) => {
 
     return (
         <>
             <ThemeProvider theme={theme}>
                 <Box sx={{ display: 'flex', justifyContent: 'center', background: {xs: `${responsiveBG}`, sm:`${responsiveBG}`, md:`url(${bgImage})`}, backgroundSize: 'cover'}} paddingY={13}>
                     <Stack direction='column' width='60%' spacing={4}>
-                        <Typography variant='h3' color='secondary' textAlign='center'>
+                        <Typography variant='h3' sx={ 
+                            (isResponsiveLastSection) ? {color: 'secondary.main'} : 
+                            {color: {xs:'primary.main', sm:'primary.main', md:'secondary.main'}}
+                            } textAlign='center'>
                             {title}
                         </Typography>
-                        <Typography variant='h1' color='secondary' textAlign='center'>
+                        <Typography variant='h1' sx={ 
+                            (isResponsiveLastSection) ? {color: 'secondary.main'} : 
+                            {color: {xs:'primary.main', sm:'primary.main', md:'secondary.main'}}
+                            } textAlign='center'>
                             {heading}
                         </Typography>
-                        <Typography variant='h3' color='secondary'  textAlign='center'>
+                        <Typography variant='h3' sx={ 
+                            (isResponsiveLastSection) ? {color: {md:'secondary.main'}}: 
+                            {color: {md:'secondary.main'}}
+                            } textAlign='center'>
                             {subheading}
                         </Typography>
-                        <Stack direction={{xs: 'column', sm: 'column', md: 'row'}} display='flex' justifyContent='space-around' width='70%' alignSelf='center' spacing={2}>
-                            <StyledButton buttonText='Playstore' borderRadius={buttonBorderRadius} />
-                            <StyledButton buttonText='App store' borderRadius={buttonBorderRadius} />
+                        <Stack direction={(isResponsiveLastSection) ? {xs: 'row', sm: 'row'} : {xs: 'column', sm: 'column', md: 'row'}} width={{xs:'100%',sm:'80%',md:'60%'}} alignSelf='center' spacing={2}>
+                            <StyledButton buttonText={(isResponsiveLastSection) ? 'Buy now' : 'Playstore'} borderRadius={buttonBorderRadius} isResponsiveLastSection={isResponsiveLastSection} />
+                            <StyledButton buttonText={(isResponsiveLastSection) ? 'Try for free' : 'App store'} borderRadius={buttonBorderRadius} isResponsiveLastSection={isResponsiveLastSection} />
                         </Stack>
                     </Stack>
                 </Box>

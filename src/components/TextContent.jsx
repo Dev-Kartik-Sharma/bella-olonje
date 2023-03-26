@@ -6,7 +6,7 @@ import theme from '../themes/theme.jsx'
 const TextContent = ({ title, heading, subheading }) => {
     return (
         <ThemeProvider theme={theme}>
-            <Typography variant='subtitle1' color='#FA4A0C' textAlign={{xs:'center', sm:'center', md:'left'}}>
+            <Typography variant='subtitle1' color='info.main' textAlign={{xs:'center', sm:'center', md:'left'}}>
                 {title}
             </Typography>
             <Typography variant='h2' textAlign={{xs:'center', sm:'center', md:'left'}}>
