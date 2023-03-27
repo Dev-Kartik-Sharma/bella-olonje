@@ -7,7 +7,7 @@ export const DoubleColumnLayout = ({phoneimg, title, heading, subheading, direct
         <Container>
             <Stack direction={{ xs: 'column-reverse', sm: 'column-reverse', md: `${direction}` }} alignItems='center' paddingX={{md:'5'}}>
                     <Stack width={{ xs:'100%', sm:'80%', md:'45%'}} height={{ xs:'400px',sm:'500px', md:'700px'}}>
-                        <img src={phoneimg} height='100%' />
+                        <img src={phoneimg} height='100%' alt='' />
                     </Stack>
                     <Stack width={{xs:'100%', sm:'80%', md:'50%'}} height='50%' spacing={2} paddingX={2}>
                         <TextContent title={title} heading={heading} subheading={subheading} />

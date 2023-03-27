@@ -21,7 +21,7 @@ export const FooterBar = () => {
                             md: 'flex',
                         }
                     }}>
-                        <img src={logo} />
+                        <img src={logo} alt='' />
                     </Stack>
                     <Stack direction='row' spacing={3}>
                         <StyledIcon src={twitter} />
